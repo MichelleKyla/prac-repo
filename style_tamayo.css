@@ -1,0 +1,666 @@
+html {
+    background-color: #fafafa;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  top: 0; 
+  left: 0;
+  background-color: #fff7f1; 
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+  }
+
+.header-title {
+  font-family: 'Sacramento', cursive;
+  font-size: 38px;
+  text-align: center;
+  color: #7A7A7A;
+  margin: 0;
+  text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+  margin-right: 25px;
+}
+
+.header-subtitle {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 35px;
+  font-weight: 900;
+  color: #CE9494;
+  margin-top: -30px;
+  text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+  margin-right: 25px;
+}
+
+.header-content {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sticker {
+  width: 80px; 
+  height: auto;
+  transition: transform 0.3s ease;
+  animation: rotateBackAndForth 1.5s infinite alternate ease-in-out;
+}
+
+@keyframes rotateBackAndForth {
+  0% {
+    transform: rotate(-30deg); 
+  }
+  100% {
+    transform: rotate(30deg); 
+  }
+}
+
+
+.main-bg {
+  width: 100%;
+  height: 500px; 
+  background-image: url('images & songs/images/checkered_bg.avif');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.polaroid {
+  background: white;
+  padding: 10px;
+  width: 250px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.polaroid:hover {
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4); 
+}
+
+.polaroid:nth-child(1) {
+  transform: rotate(-2deg); 
+  margin-left: 140px;
+  background-color: #FEC3C3;
+}
+
+.polaroid:nth-child(2) {
+  transform: rotate(5deg);
+  background-color: #FFF0E7;
+}  
+
+.polaroid img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.left-side {
+  display: flex;
+  flex-direction: row;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-right: 250px;
+  position: relative; 
+}
+
+.right-side p {
+  font-size: 50px;
+  color: #CE9494;
+  font-family: 'Quicksand', sans-serif;
+  margin: 0 0 10px 0;
+  font-weight: 900;
+  text-shadow: 
+  -2px -2px 0px white,  
+    2px -2px 0px white,
+  -2px  2px 0px white,
+    2px  2px 0px white;
+}
+
+.dropdown {
+  position: relative; 
+}
+
+.intro-button {
+  padding: 15px 40px;
+  background-color: #FEC3C3;
+  border-color: #CE9494;
+  cursor: pointer;
+  color: #7A7A7A;
+  font-weight: 600;
+  font-size: 16px;
+  border: 2px solid #CE9494;
+  border-radius: 25px 25px 0 0;
+  margin-top: 20px;
+  z-index: 2;
+}
+
+.intro-button:hover {
+  border-radius: 25px 25px 0 0;
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  width: 100%;
+  border-radius: 0 0 25px 25px;
+}
+
+.dropdown-content a {
+  color: #CE9494;
+  width: 100%;
+  padding: 6px 0;
+  text-decoration: none;
+  display: block;
+  font-weight: 600;
+  text-align: center;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #FFF0E7;
+}
+
+.dropdown-content a:nth-child(5):hover {
+  border-radius: 0 0 25px 25px;
+}
+
+.design-bg {
+  width: 100%;
+  height: 100px;
+  background-image: url('images & songs/images/design-bg.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.info-header {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  color: #7A7A7A;
+  text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.information .card-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 10px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-bottom: 40px;
+}
+
+.information .card {
+  background: #fff59b;
+  border-radius: 25px 25px 25px 25px;
+  padding: 15px;
+  width: 200px;
+  height: 200px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.information .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.information .card img {
+  width: 80%;
+  height: auto;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.information p {
+color: #666;
+}
+
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 1; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+
+.modal-content {
+  background-color: #FFF0E7;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 60%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  display: flex; 
+  align-items: center; 
+  gap: 20px; 
+  color: #666;
+}
+
+.modal-content img {
+  max-width: 30%; 
+  height: auto; 
+  border-radius: 8px; 
+}
+
+.modal-content h2 {
+  text-align: center;
+  text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content p {
+  text-align: justify;
+}
+
+.modal-content .text-content {
+  flex: 1; 
+  text-align: left;
+}
+
+.close {
+  cursor: pointer;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+
+.interests {
+  background-color: #d0d9ff;
+  height: 520px;
+  padding: 5px;
+  margin-bottom: 50px;
+}
+
+.int-header {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 600;
+  color: #5E6B9A;
+  text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 10px;
+}
+
+.navbar ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar li {
+  margin: 0 15px;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: #576F8C;
+  font-size: 20px;
+  font-family: 'Poppins', sans-serif;
+  transition: color 0.3s;
+}
+
+.navbar a:hover,
+.navbar a:focus {
+  color: #CE9494;
+}
+
+.navbar a.active {
+  color: #CE9494;
+}
+
+.interests .card-container {
+  margin: 20px 0;
+  text-align: left;
+  display: none;
+}
+
+.interests .card-container:target {
+  display: block;
+}
+
+.interests .card-container h2 {
+  font-family: 'Poppins', sans-serif;
+  color: #5E6B9A;
+  margin-left: 30px;
+  text-decoration: underline;
+}
+
+.interests .cards {
+  display: flex;
+  overflow-x: auto;
+  padding: 10px;
+  scrollbar-width: thin;
+}
+
+.interests .cards::-webkit-scrollbar {
+  height: 8px;
+}
+
+.interests .cards::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+.interests .card {
+  background: white;
+  height: 270px;
+  width: 200px;
+  margin-right: 10px;
+  margin-left: 10px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  transition: transform 0.3s ease;
+  border-radius: 25px 25px 25px 25px;
+  overflow: hidden;
+}
+
+.interests .card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border-radius: 25px;
+  object-fit: fill;
+}
+
+.interests .card:hover {
+  transform: scale(1.05);
+}
+
+.music-container {
+  background-color: #c5fbb5;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  margin: auto;
+  border: 4px solid #7bc67e;
+  padding-bottom: 30px;
+}
+
+.music-container h2 {
+    text-align: center;
+    font-size: 35px;
+    font-weight: 600;
+    color: #88A87C;
+    text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+    border-color: #88A87C;
+}
+
+.msticker {
+  width: 130px; 
+  height: auto;
+}
+
+#player{
+  display: flex;
+  position: absolute;
+  margin-top: -70px;
+  margin-left: -70px;
+}
+
+#cute {
+  display: flex;
+  position: absolute;
+  margin-top: -94px;
+  margin-left: 840px;
+}
+
+.song {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    max-width: 800px;
+    margin: 10px auto;
+}
+
+.song-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 20px;
+    flex-shrink: 0; 
+    animation: rotate 50s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+.song-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-right: 20px;
+    width: 230px;
+}
+
+.song-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    color: #666;
+}
+
+.artist-name {
+    font-size: 14px;
+    margin: 0;
+    color: #666; 
+}
+
+audio {
+    width: 600px;
+}
+
+.design-bg2 {
+  width: 100%;
+  height: 100px; 
+  background-image: url('images & songs/images/design.webp');
+  background-size: cover;
+  background-position: center;
+}
+
+.affirmations {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.affirmations-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images & songs/images/affirmations-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.star {
+  width: 150px;
+  height: auto;
+  position: relative;
+  z-index: 3;
+  margin-right: 290px;
+  margin-top: -20px;
+}
+
+.affirmations h2 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  font-size: 35px;
+  color: #7594C9;
+  text-align: center;
+  font-weight: 600;
+  text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.affirmations .cards-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  z-index: 2;
+  max-width: 100%;
+}
+
+.affirmations .card {
+  flex: 1;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  height: 200px;
+  text-align: center;
+  position: relative;
+  margin-top: 100px;
+  padding-top: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.affirmations .card:hover {
+  transform: scale(1.05);
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.affirmations .card p {
+  font-size: 18px;
+  color: #7594C9;
+  font-weight: 500;
+  margin-bottom: 30px;
+  text-align: left;
+  text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.affirmations .card .author {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  font-size: 14px;
+  color: #5E6B9A;
+  text-align: right;
+}
+
+.background-container {
+  background: url('images & songs/images/checkered_bg.avif') no-repeat center center;
+  background-size: cover;
+  padding: auto;
+}
+
+.contact-section {
+  background: #FFF0E7;
+  border: 4px solid #CE9494;
+  border-radius: 15px;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.contact-content {
+  text-align: center;
+  text-shadow: 1px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.contact-image {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  border: 3px solid #CE9494;
+}
+
+.contact-content h2 {
+  font-size: 35px;
+  color: #CE9494;
+  margin: 10px 0;
+}
+
+.contact-content p {
+  color: #666;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.social-icons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon {
+  width: 50px;
+  height: auto;
+  margin: 0 10px;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover {
+  transform: scale(1.2);
+}
+
+.footer {
+  background-color: #f8f8f8;
+  color: #7A7A7A;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  border-top: 2px solid #CE9494;
+}
+
+.footer p {
+  margin: 0 15px;
+  font-size: 17px;
+  font-family: 'Quicksand', sans-serif;
+}
